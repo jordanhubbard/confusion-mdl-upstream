@@ -4727,8 +4727,8 @@ mdl_value_t *mdl_builtin_eval_putrest(mdl_value_t *form, mdl_value_t *args)
     GETNEXTARG(head, args);
     GETNEXTREQARG(tail, args);
     NOMOREARGS(args);
-    if (head->pt != PRIMTYPE_LIST) return mdl_call_error_ext("FIRST-ARG-WRONG-TYPE", "First arg to PUTREST must have primtype LIST", cur_frame->subr, head, NULL);
-    if (tail->pt != PRIMTYPE_LIST) return mdl_call_error_ext("SECOND-ARG-WRONG-TYPE", "Second arg to PUTREST must have primtype LIST", cur_frame->subr, head, NULL);
+    if (head->pt != PRIMTYPE_LIST) mdl_error("First arg to PUTREST must have primtype LIST");
+    if (tail->pt != PRIMTYPE_LIST) mdl_error("Second arg to PUTREST must have primtype LIST");
     
     if (!head->v.p.cdr)
         mdl_error("Can't PUTREST on an empty list");
@@ -5730,7 +5730,7 @@ mdl_value_t *mdl_builtin_eval_memq(mdl_value_t *form, mdl_value_t *args)
     mdl_struct_walker_t w;
     mdl_value_t *elem;
 
-    if (!structured) mdl_error("Not enough arguments to MEMQ");
+    if (!obj) mdl_error("Not enough arguments to MEMQ");
     if (LHASITEM(args, 2))
         mdl_error("Too many args to MEMQ");
     if (mdl_primtype_nonstructured(structured->pt)) mdl_error("Second arg to MEMQ must be structured");
