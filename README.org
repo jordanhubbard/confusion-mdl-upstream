@@ -28,7 +28,7 @@ To play Zork, unpack this directory, change directory to the new
 e.g. ~../confusion-src/mdli -r MDL/MADADV.SAVE~. 
 You should be at the white house: 
 
-#+BEGIN_CODE
+#+BEGIN_SRC 
 $ ../confusion-src/mdli -r MDL/MADADV.SAVE 
 
 This Zork created July 6, 2009. 
@@ -41,7 +41,7 @@ door.
 There is a small mailbox here. 
 
 A rubber mat saying 'Welcome to Zork!' lies by the door. 
-#+END_CODE
+#+END_SRC
 
 The HELP, DOC and INFO commands do not work, as I do not have those files. 
 I have played Zork all the way through, however, I have made some 
