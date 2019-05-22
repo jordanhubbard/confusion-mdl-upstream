@@ -69,3 +69,6 @@ overflow, compiled code.
 ** Addendum
 
 B. Slade: Minor updates to make it compile with recent versions of gcc
+
+------
+* Read more about playing the PDP-10 version of Zork here: https://babbagefiles.xyz/zork-confusion/
