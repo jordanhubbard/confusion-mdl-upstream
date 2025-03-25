@@ -20,7 +20,7 @@ cygwin, but I wouldn't bet on it.
 Once you have the GC, a simple "make" will build the interpreter. 
 The Zork sources, somewhat modified for the limitations of this 
 interpreter, are available at: <http://www.russotto.net/~mrussotto/confusion/mdlzork.tgz>
-[*Note:* original site seems to be offline; access an archived version instead at: https://web.archive.org/web/20170801091842/http://www.russotto.net/~mrussotto/confusion/mdlzork.tgz]
+[*Note:* original site seems to be offline; access an archived version instead at: <https://web.archive.org/web/20170801091842/http://www.russotto.net/~mrussotto/confusion/mdlzork.tgz> ]
 
 
 [see also <https://github.com/itafroma/zork-mdl> ]
