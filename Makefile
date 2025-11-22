@@ -17,9 +17,11 @@
 CDEBUGFLAGS = -g -DGC_DEBUG
 COPTFLAGS = -O2
 CWARNFLAGS =  -Wall -Wno-switch
-LIBS = -lgc -lgccpp
-CFLAGS = $(CDEBUGFLAGS) $(COPTFLAGS) $(CWARNFLAGS)
-CXXFLAGS = $(CDEBUGFLAGS) $(COPTFLAGS) $(CWARNFLAGS)
+GC_CFLAGS := $(shell pkg-config --cflags bdw-gc 2>/dev/null || echo "-I/opt/homebrew/include")
+GC_LIBS := $(shell pkg-config --libs bdw-gc 2>/dev/null || echo "-L/opt/homebrew/lib -lgc")
+LIBS = $(GC_LIBS) -lgccpp
+CFLAGS = $(CDEBUGFLAGS) $(COPTFLAGS) $(CWARNFLAGS) $(GC_CFLAGS)
+CXXFLAGS = $(CDEBUGFLAGS) $(COPTFLAGS) $(CWARNFLAGS) $(GC_CFLAGS)
 
 PERL = perl
 
